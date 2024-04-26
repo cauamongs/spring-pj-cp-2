@@ -15,7 +15,7 @@ public record VeiculoResponse(
         String cor,
         FabricanteResponse fabricante,
         Double preco,
-        String palavraDeFeito,
+        String palavraDeEfeito,
         Short cilindradas
 ) {
 }
