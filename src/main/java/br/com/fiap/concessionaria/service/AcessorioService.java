@@ -12,16 +12,36 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 @Service
-public class AcessorioService implements ServiceDTO<Acessorio, AcessorioRequest, AcessorioResponse>{
+public class AcessorioService implements ServiceDTO<Acessorio, AcessorioRequest, AcessorioResponse> {
 
     @Autowired
     private AcessorioRepository repo;
 
     @Override
-    public Acessorio toEntity(AcessorioRequest r) {
+    public Collection<TipoVeiculo> findAll() {
+        return null;
+    }
+
+    @Override
+    public Collection<Acessorio> findAll(Example<Acessorio> example) {
+        return repo.findAll(example);
+    }
+
+    @Override
+    public Acessorio findById(Long id) {
+        return repo.findById(id).orElse(null);
+    }
+
+    @Override
+    public Acessorio save(Acessorio e) {
+        return repo.save(e);
+    }
+
+    @Override
+    public Acessorio toEntity(AcessorioRequest dto) {
         return Acessorio.builder()
-                .nome( r.nome() )
-                .preco( r.preco() )
+                .nome(dto.nome())
+                .preco(dto.preco())
                 .build();
     }
 
@@ -29,29 +49,9 @@ public class AcessorioService implements ServiceDTO<Acessorio, AcessorioRequest,
     public AcessorioResponse toResponse(Acessorio e) {
 
         return AcessorioResponse.builder()
-                .id( e.getId() )
-                .nome( e.getNome() )
-                .preco( e.getPreco() )
+                .id(e.getId())
+                .nome(e.getNome())
+                .preco(e.getPreco())
                 .build();
-    }
-
-    @Override
-    public Collection<TipoVeiculo> findAll() {
-        return repo.findAll();
-    }
-
-    @Override
-    public Collection<Acessorio> findAll(Example<Acessorio> example) {
-        return repo.findAll( example );
-    }
-
-    @Override
-    public Acessorio findById(Long id) {
-        return repo.findById( id ).orElse( null );
-    }
-
-    @Override
-    public Acessorio save(Acessorio e) {
-        return repo.save( e );
     }
 }
