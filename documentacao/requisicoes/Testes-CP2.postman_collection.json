@@ -1,0 +1,387 @@
+{
+  "info": {
+    "_postman_id": "e298b703-b744-400d-80da-b4d097836f58",
+    "name": "Testes-CP2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30957512"
+  },
+  "item": [
+    {
+      "name": "Veiculo",
+      "item": [
+        {
+          "name": "veiculo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Golf GTI\",\r\n    \"anoDeFabricacao\": 2019,\r\n    \"cor\": \"Branco\",\r\n    \"preco\": 200000,\r\n    \"cilindradas\": 2000,\r\n    \"modelo\": \"Gti\",\r\n    \"palavraDeEfeito\": \"Esportivo\",\r\n    \"fabricante\": \r\n        \"id\": 1\r\n    },\r\n    \"tipo\": {\r\n        \"id\": 1\r\n    },\r\n    \"acessorios\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost/veiculos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "veiculos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET ALL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/veiculos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "veiculos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET BY ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/veiculos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "veiculos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "LOJA",
+      "item": [
+        {
+          "name": "LOJA",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Concessionária BugMotors\",\r\n    \"veiculosComercializados\": []\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost/loja",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "loja"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET ALL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/loja",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "loja"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET BY ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/loja/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "loja",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Fabricante",
+      "item": [
+        {
+          "name": "POST FABRICANTE",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\" : \"Volkswagen\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost/fabricantes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "fabricantes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "FABRICANTE - GET ALL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/fabricantes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "fabricantes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET BY ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/fabricantes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "fabricantes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Acessorio",
+      "item": [
+        {
+          "name": "POST ACESSORIO",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Downpipe\",\r\n    \"preco\": 1500\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost/acessorio",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "acessorio"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ACESSORIO",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/acessorio/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "acessorio",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tipo Veiculo",
+      "item": [
+        {
+          "name": "TIPO-DE-VEICULO",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Hatch\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost/tipo-de-veiculo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "tipo-de-veiculo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TIPO-DE-VEICULO",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/tipo-de-veiculo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "tipo-de-veiculo"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Caracteristica",
+      "item": [
+        {
+          "name": "POST CARACTERISTICA",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Esportivo\",\r\n    \"descricao\": \"2.0 Turbo 230 cavalos\",\r\n    \"veiculo\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost/caracteristicas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "caracteristicas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET ALL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/caracteristicas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "caracteristicas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET BY ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost/caracteristicas/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "caracteristicas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
